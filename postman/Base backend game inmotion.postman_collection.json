@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "e1fac04f-2ca2-42de-abcc-0a7043292804",
+		"name": "Base backend game inmotion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Auth",
+			"item": [
+				{
+					"name": "1.1 Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/login",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "yusuf1234567",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ab",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "settings",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "location_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/register",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 Update Setting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "settings",
+									"value": "\"{\"locale\":\"id\"}\"",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/update_setting",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"update_setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 RequestAccessToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "userbaru",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/request_access_token",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"request_access_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.5 Update Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5Xs2HR55zAVDF1Lu7rQaT4kT8daAI5sssKQGtT3ikARkLcDopxf52EzyjkvL684NbAeMth9aZ6MtW76EqbX2JpmboO3Qwk6wuAmUP0s2paZ7A5eZG6bo8qnNiOjiweyHIT1Da0bWJW7R6i3D1zEXtgcY61MLgtp9dSZ4g0LYdRXpMSD1NIn6Zh4A3IyQ2v4A7JByyFGC",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "userbaru",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "hore",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email@email.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/update",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Levels",
+			"item": [
+				{
+					"name": "2.1 Set Last Level",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9gGYxLtr5SiSvuFMBEdZQIcB5MJ7STKxqCEMBp5GItOBPb4kkbnWn1mVugKB3wnWsTqKJWCQOdrtVJDYwEFmfsPmPHQJz2eE6U6R9vUtl0PU5QUa4VvBLmCPgtpf8DMZg6xx9L4lIJB8TILktu3V5pNJv5tg0zZXRIer9izubMVDU4iYkMiRigwCwZmSStypti5RveEi"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "last_level",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}level/last_level",
+							"host": [
+								"{{url}}level"
+							],
+							"path": [
+								"last_level"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2 Get Last Level",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "last_level",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}level/last_level",
+							"host": [
+								"{{url}}level"
+							],
+							"path": [
+								"last_level"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.3 Get all Levels",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "last_level",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}level/all",
+							"host": [
+								"{{url}}level"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Session",
+			"item": [
+				{
+					"name": "3.1 Get all history session game",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "last_level",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}session/history/all",
+							"host": [
+								"{{url}}session"
+							],
+							"path": [
+								"history",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.2 Get history session by level game",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "last_level",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}session/history/3",
+							"host": [
+								"{{url}}session"
+							],
+							"path": [
+								"history",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.3 Finish Level Session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer RQWEzzEyCVyUFn5YFcej3OtxzBceYDJiqNNqEADYsO7YFbvMpe9YqVgtpYF1ihXXA8xOv92znMqbrcz4NdtLhNRmtyimgmMEOLP1f3i3NluK991BjGMCMgyaAU5jgI7eb1m3B66jjuxiRsZUkNNVvx6VV6J4hG7ywsWRn6bQMeEYlfW3TNEuc2cbHjY9H0bKs6gpKDcu"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "score",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "other_data",
+									"value": "{\"data\":\"yo\"]}",
+									"type": "text"
+								},
+								{
+									"key": "level_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}session/finish",
+							"host": [
+								"{{url}}session"
+							],
+							"path": [
+								"finish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. Statistic",
+			"item": [
+				{
+					"name": "4.1 Get player statistic",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "score",
+									"value": "229000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "other_data",
+									"value": "{\"data\":\"yo\"]}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "level_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}statistic/all",
+							"host": [
+								"{{url}}statistic"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.2 Set Player statistic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "statistic_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "level_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}statistic/set",
+							"host": [
+								"{{url}}statistic"
+							],
+							"path": [
+								"set"
+							]
+						},
+						"description": "Value yang dikirim akan menjadi nilai statistic teraktual. Jadi bukan sistem tambah kurang."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5. Leaderboard",
+			"item": [
+				{
+					"name": "5.1 Get leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 45e8hliSS6EkIjRjyyfRC9j40uIvc1BYEuW31BRi6l8lVAAkX1tSjiqpUoIVZ6EoCpZBndlnQTL8dM6SxCZiiaFB2ACR6IFXl3cDe4csrTkCm5KgV93PGmQhzFEqeLurle8OMJ6U1OEFEynLkrTkMUWoQGzuI28i2whITQ0bLVtAi2i4e3hC6hMtSqOH9zrlUJcg1AxS"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}leaderboard/all/1/10",
+							"host": [
+								"{{url}}leaderboard"
+							],
+							"path": [
+								"all",
+								"1",
+								"10"
+							]
+						},
+						"description": "leaderboard/{lvl_id}/{total_data}"
+					},
+					"response": []
+				},
+				{
+					"name": "5.1 Get inbetween leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer D6dM24GtUbAmthRiUJoXeNMwEavAdgiLRYy7d54cNMb19Do6bBaFvoBPCverqm0COCzj4sAQxVelqLFVwzgYPgIJe8hKAjRzhMd03GCZbareEEABVbTlmDM7eRct7NWX6oCAlBb6p5fjYJVkwCXIE5wATzq4MHXCvxW08fu54vL9Wckp4x9OklitZB8zti6X7kVWlSjf"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}leaderboard/inbetween/1",
+							"host": [
+								"{{url}}leaderboard"
+							],
+							"path": [
+								"inbetween",
+								"1"
+							]
+						},
+						"description": "leaderboard/{lvl_id}/{total_data}"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
