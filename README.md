@@ -46,6 +46,32 @@ password:admin
 ### 10. API
 - All API documented using [postman]https://www.getpostman.com/ , all collection and environment saved in ```./postman``` at this repository.
 
+## All API list.
+
+#### Auth
+- Login.
+- Register.
+- Update Setting.
+- Update Profile.
+
+#### Levels
+- Set last level user.
+- Get last level user.
+- Get all level.
+
+#### Session
+- Get all history game of user.
+- Get session history by level game.
+- Finish level session.
+
+##### Statistic
+- Get player statistic.
+- Set player statistic.
+
+#### Leaderboard
+- Get leaderboard.
+- Get inbetween leaderboard.
+- Get best score.
 
 ## License
 
