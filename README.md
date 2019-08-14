@@ -44,7 +44,7 @@ password:admin
 ```
 
 ### 10. API
-- All API documented using [postman]https://www.getpostman.com/ , all collection and environment saved in ```./postman``` at this repository.
+- All API documented using [postman](https://www.getpostman.com/) , all collection and environment saved in ```./postman``` at this repository.
 
 ## All API list.
 
