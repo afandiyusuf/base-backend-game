@@ -1,24 +1,12 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-/.vscode
-/.vagrant
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-.env
-
 
 # Created by https://www.gitignore.io/api/laravel
+# Edit at https://www.gitignore.io/?templates=laravel
 
 ### Laravel ###
-vendor/
+/vendor/
 node_modules/
 npm-debug.log
+yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -28,14 +16,10 @@ app/storage/
 public/storage
 public/hot
 storage/*.key
-.env.*.php
-.env.php
 .env
 Homestead.yaml
 Homestead.json
-
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
-
+/.vagrant
+.phpunit.result.cache
 
 # End of https://www.gitignore.io/api/laravel
