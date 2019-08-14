@@ -10,6 +10,20 @@
 			"item": [
 				{
 					"name": "1.1 Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f18f5973-5abe-4d29-9a20-38903af3d0b6",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.environment.set(\"access_token\", jsonData.data.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -18,12 +32,12 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "admin123",
+									"value": "yusuf12345",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "admin123",
+									"value": "yusuf12345",
 									"type": "text"
 								},
 								{
@@ -47,6 +61,20 @@
 				},
 				{
 					"name": "1.2 register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "985ea1d0-204f-4951-81d9-1db0d483c03e",
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.environment.set(\"access_token\", jsonData.data.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -55,17 +83,17 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "yusuf1234567",
+									"value": "yusuf12345",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "123123123",
+									"value": "yusuf12345",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "ab",
+									"value": "ab@ababab",
 									"type": "text"
 								},
 								{
@@ -81,6 +109,16 @@
 								{
 									"key": "location_id",
 									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "no_hp",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "yusuf",
 									"type": "text"
 								}
 							]
@@ -104,7 +142,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
 						"body": {
@@ -145,7 +183,7 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "userbaru",
+									"value": "yusuf12345",
 									"type": "text"
 								}
 							]
@@ -169,7 +207,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer 5Xs2HR55zAVDF1Lu7rQaT4kT8daAI5sssKQGtT3ikARkLcDopxf52EzyjkvL684NbAeMth9aZ6MtW76EqbX2JpmboO3Qwk6wuAmUP0s2paZ7A5eZG6bo8qnNiOjiweyHIT1Da0bWJW7R6i3D1zEXtgcY61MLgtp9dSZ4g0LYdRXpMSD1NIn6Zh4A3IyQ2v4A7JByyFGC",
+								"value": "Bearer {{access_token}}",
 								"type": "text"
 							}
 						],
@@ -178,17 +216,17 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "userbaru",
+									"value": "yusuf12345",
 									"type": "text"
 								},
 								{
 									"key": "name",
-									"value": "hore",
+									"value": "yusuf",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "email@email.com",
+									"value": "ab@abab",
 									"type": "text"
 								}
 							]
@@ -217,7 +255,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer 9gGYxLtr5SiSvuFMBEdZQIcB5MJ7STKxqCEMBp5GItOBPb4kkbnWn1mVugKB3wnWsTqKJWCQOdrtVJDYwEFmfsPmPHQJz2eE6U6R9vUtl0PU5QUa4VvBLmCPgtpf8DMZg6xx9L4lIJB8TILktu3V5pNJv5tg0zZXRIer9izubMVDU4iYkMiRigwCwZmSStypti5RveEi"
+								"value": "Bearer {{access_token}}"
 							}
 						],
 						"body": {
@@ -225,7 +263,7 @@
 							"formdata": [
 								{
 									"key": "last_level",
-									"value": "12",
+									"value": "1",
 									"type": "text"
 								},
 								{
@@ -255,25 +293,9 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "last_level",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123123",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
 						"url": {
 							"raw": "{{url}}level/last_level",
 							"host": [
@@ -293,25 +315,9 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "last_level",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123123",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
 						"url": {
 							"raw": "{{url}}level/all",
 							"host": [
@@ -336,25 +342,9 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "last_level",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123123",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
 						"url": {
 							"raw": "{{url}}session/history/all",
 							"host": [
@@ -375,33 +365,17 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "last_level",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123123",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
 						"url": {
-							"raw": "{{url}}session/history/3",
+							"raw": "{{url}}session/history/1",
 							"host": [
 								"{{url}}session"
 							],
 							"path": [
 								"history",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -414,7 +388,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer RQWEzzEyCVyUFn5YFcej3OtxzBceYDJiqNNqEADYsO7YFbvMpe9YqVgtpYF1ihXXA8xOv92znMqbrcz4NdtLhNRmtyimgmMEOLP1f3i3NluK991BjGMCMgyaAU5jgI7eb1m3B66jjuxiRsZUkNNVvx6VV6J4hG7ywsWRn6bQMeEYlfW3TNEuc2cbHjY9H0bKs6gpKDcu"
+								"value": "Bearer {{access_token}}"
 							}
 						],
 						"body": {
@@ -422,7 +396,7 @@
 							"formdata": [
 								{
 									"key": "score",
-									"value": "100",
+									"value": "120",
 									"type": "text"
 								},
 								{
@@ -461,32 +435,9 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "score",
-									"value": "229000",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "other_data",
-									"value": "{\"data\":\"yo\"]}",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "level_id",
-									"value": "1",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
 						"url": {
 							"raw": "{{url}}statistic/all",
 							"host": [
@@ -506,7 +457,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer q2rrOxyR7XkN4yZ6M0Hkll1vy6ybz5qkyXscAwWg59dhaWQQJVGtWycj8QphaqzeCo45rDU4TOcqkC1PmZSJNvEobfZkpbBUKmflZ57rKJuVAjEnOx64bJjDW2nLfZgPhUhrsNrG4WaGsIveFs4YghtRndOHUdZMzpruGlUlduvrB24kUDexnZavJNrhUKO9wum4HIov"
+								"value": "Bearer {{access_token}}"
 							}
 						],
 						"body": {
@@ -555,19 +506,18 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer 45e8hliSS6EkIjRjyyfRC9j40uIvc1BYEuW31BRi6l8lVAAkX1tSjiqpUoIVZ6EoCpZBndlnQTL8dM6SxCZiiaFB2ACR6IFXl3cDe4csrTkCm5KgV93PGmQhzFEqeLurle8OMJ6U1OEFEynLkrTkMUWoQGzuI28i2whITQ0bLVtAi2i4e3hC6hMtSqOH9zrlUJcg1AxS"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {},
 						"url": {
-							"raw": "{{url}}leaderboard/all/1/10",
+							"raw": "{{url}}leaderboard/all/all/all",
 							"host": [
 								"{{url}}leaderboard"
 							],
 							"path": [
 								"all",
-								"1",
-								"10"
+								"all",
+								"all"
 							]
 						},
 						"description": "leaderboard/{lvl_id}/{total_data}"
@@ -581,10 +531,33 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer D6dM24GtUbAmthRiUJoXeNMwEavAdgiLRYy7d54cNMb19Do6bBaFvoBPCverqm0COCzj4sAQxVelqLFVwzgYPgIJe8hKAjRzhMd03GCZbareEEABVbTlmDM7eRct7NWX6oCAlBb6p5fjYJVkwCXIE5wATzq4MHXCvxW08fu54vL9Wckp4x9OklitZB8zti6X7kVWlSjf"
+								"value": "Bearer {{access_token}}"
 							}
 						],
-						"body": {},
+						"url": {
+							"raw": "{{url}}leaderboard/inbetween/1",
+							"host": [
+								"{{url}}leaderboard"
+							],
+							"path": [
+								"inbetween",
+								"1"
+							]
+						},
+						"description": "leaderboard/{lvl_id}/{total_data}"
+					},
+					"response": []
+				},
+				{
+					"name": "5.3 Get record score",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
 						"url": {
 							"raw": "{{url}}leaderboard/inbetween/1",
 							"host": [
